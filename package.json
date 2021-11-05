@@ -41,7 +41,6 @@
     "express": "^4.17.1",
     "globalize": "^1.6.0",
     "jquery": "^3.5.1",
-    "node-sass": "^4.14.1",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
     "react-app-polyfill": "^2.0.0",
@@ -54,6 +53,7 @@
     "react-select": "^3.2.0",
     "react-split": "^2.0.9",
     "redux": "4.0.5",
+    "sass-loader": "^12.3.0",
     "universal-cookie": "^4.0.4",
     "zepto-browserify": "^1.1.6-1"
   },
@@ -63,7 +63,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI=false && react-scripts build",
     "test": "react-scripts test",
     "test:cov": "npm test -- --coverage --watchAll=false",
     "test:debug": "react-scripts --inspect-brk test --runInBand",
