@@ -12,6 +12,7 @@ import BASE_URL from 'src/views/base';
   CSidebarMinimizer,
   CSidebarNavDropdown,
   CSidebarNavItem,
+  CInput
 } from '@coreui/react'
 
 
@@ -32,7 +33,7 @@ const TheSidebar = () => {
 
   
   const [getgym,setgym] = useState([])
-
+  
   useEffect(() => {
     axios
     .get(BASE_URL + 'gymprofile/gym/' + cookies.get('gym_uuid'))
@@ -44,6 +45,7 @@ const TheSidebar = () => {
     .catch(err => {
       // console.log(err)
     })
+    console.log("navigation", navigation)
   }, [])
 
 
@@ -88,7 +90,7 @@ const TheSidebar = () => {
             CSidebarNavDivider,
             CSidebarNavDropdown,
             CSidebarNavItem,
-            CSidebarNavTitle
+            CSidebarNavTitle, CInput
           }}
         />
       </CSidebarNav>

@@ -12,8 +12,9 @@ var perm = cookies.get('perms');
 if(!perm){
   window.location.reload();
 }
+console.log("perm>>>>>>>>", perm)
 
-if (perm.includes('Dashboard')){
+
   NavArray.push( {
     
           _tag: 'CSidebarNavItem',
@@ -22,8 +23,113 @@ if (perm.includes('Dashboard')){
           icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
          
         
-  })
+  },{
+    
+    _tag: 'CSidebarNavItem',
+    name: 'CRM',
+    to: '/base/manage',
+    icon: 'cil-drop',
+  
+}, {
+  _tag: 'CSidebarNavItem',
+    name: 'Plans and Packages',
+    to: '/base/Package',
+    icon: 'cil-drop',
+},
+{
+    
+      _tag: 'CSidebarNavItem',
+      name: 'Billing & Invoices Page ',
+      to: '/base/Invoicing',
+      icon: 'cil-drop',
+    },{
+    
+      _tag: 'CSidebarNavDropdown',
+      name: 'Product/Service Page',
+      route: '',
+      icon: 'cil-puzzle',
+      _children: [
+        
+        
+        {
+          _tag: 'CSidebarNavItem',
+          name: 'Classes',
+          to: '/base/Classes',
+        },
+        { 
+          _tag: 'CSidebarNavItem',
+          name: 'Courses',
+          to: '/base/Course',
+        },
+        {
+          _tag: 'CSidebarNavItem',
+          name: 'Online',
+          to: '/base/Online',
+        },
+        // {
+        //   _tag: 'CSidebarNavItem',
+        //   name: 'On Demand Videos',
+        //   to: '',
+        // },
+        
+        
+      ],
+    
+},   {
+  _tag: 'CSidebarNavItem',
+  name: 'Membership',
+  to: '/base/Membership',
+  icon: 'cil-drop',
+},{
+    
+  _tag: 'CSidebarNavItem',
+  name: 'Instructor',
+  to: '/base/Instructor',
+  icon: 'cil-drop',      
+  
+},{
+  _tag: 'CSidebarNavItem',
+          name: 'Bookings',
+          to: '/base/Bookings',
+          icon: 'cil-drop'
+},{
+  _tag: 'CSidebarNavItem',
+        name: 'Holidays ',
+        to: '/base/Holiday',
+        icon: 'cil-drop',
+},{
+  _tag: 'CSidebarNavItem',
+      name: 'Calendar ',
+      to: '/calender',
+      icon: 'cil-drop',
+}, {
+  _tag: 'CSidebarNavItem',
+  name: 'Expenses ',
+  to: '/base/Expenses',
+  icon: 'cil-drop',
+},{
+  _tag: 'CSidebarNavItem',
+      name: 'Reports',
+      to: '/base/Reports',
+      icon: 'cil-puzzle',
+},{
+  _tag: 'CSidebarNavItem',
+          name: 'Roles and Permissions ',
+          to: '/base/permissions',
+          icon: 'cil-drop',
+},{
+  _tag: 'CSidebarNavItem',
+          name: 'Gym Members ',
+          to: '/base/users',
+          icon: 'cil-drop',
+},{
+  _tag: 'CSidebarNavItem',
+        name: 'Gym Profile',
+        to: '/base/Gymprofile',
+        icon: 'cil-puzzle',
+         
 }
+  )
 
 
 if (perm.includes('CRM')){
